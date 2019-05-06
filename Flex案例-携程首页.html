@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      *{
+        margin:0;
+        padding:0;
+      }
+      a{
+        text-decoration: none;
+      }
+      /*头部*/
+      header{
+        width:100%;
+        /*伸缩布局*/
+        display:flex;
+      }
+      header>a{
+        flex:1;
+      }
+      header>a>img{
+        width:100%;
+      }
+      /*主要内容*/
+      main{
+        width:100%;
+        padding:0 10px;
+        box-sizing:border-box;
+        /*background-color: red;*/
+      }
+      main>.items{
+        width:100%;
+        height:100px;
+        border-radius:10px;
+        margin:10px 0;
+        /*伸缩布局*/
+        display:flex;
+      }
+      main>.items:nth-child(1){
+        background-color: rgb(78,50,182);
+      }
+      main>.items:nth-child(2){
+        background-color:rgb(31,153,209);
+      }
+      main>.items:nth-child(3){
+        background-color: rgb(240,147,7);
+      }
+      main>.items:nth-child(4){
+        background-color: rgb(187,19,131);
+      }
+      .items>.left{
+        flex:1;
+      }
+      .items>.right{
+        flex:2;
+        /*伸缩布局*/
+        display:flex;
+        /*换行*/
+        flex-wrap:wrap;
+      }
+      .items>.right>a{
+        display:block;
+        width:50%;
+        color:#fff;
+         /*伸缩布局*/
+        display:flex;
+        /*居中*/
+        justify-content:center;
+        align-items:center;
+        box-sizing: border-box;
+        border-left: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+      }
+      /*取最后两个a标签：倒数第1和倒数第2个*/
+      .items>.right>a:nth-last-child(2-n){
+        border-bottom: none;
+      }
+      .other{
+        width:100%;
+        display:flex;
+      }
+      .other>a{
+        flex:1;
+      }
+      .other>a>img{
+        width:100%;
+      }
+      /*尾部*/
+      footer{
+        width:100%;
+      }
+      footer>.nav{
+        width:100%;
+        height:30px;
+        border-top:1px solid #ccc;
+        border-bottom:1px solid #ccc;
+        /*伸缩布局*/
+        display:flex;
+      }
+      footer>.nav>a{
+        color:gray;
+        flex:1;
+        /*伸缩布局*/
+        display:flex;
+        justify-content: center;
+        align-items:center;
+      }
+      footer>.link{
+        text-align:center;
+        margin:5px 0;
+      }
+      footer>.link>a{
+        color:blue;
+        /*添加a标签下划线*/
+        text-decoration:underline;
+      }
+      footer>.copyright{
+        color:gray;
+        text-align:center;
+        margin-bottom:5px;
+      }
+    </style>
+</head>
+<body>
+  <div id="box">
+    <!--头部-->
+    <header>
+      <a href="javascript:;">
+        <img src="./xcImages/1.png" alt="">
+      </a>
+    </header>
+    <!--主要内容-->
+    <main>
+      <section class="items">
+        <div class="left"></div>
+        <div class="right">
+          <a href="">海外酒店</a>
+          <a href="">团购</a>
+          <a href="">特价机票</a>
+          <a href="">民宿客栈</a>
+        </div>
+      </section>
+     <section class="items">
+        <div class="left"></div>
+        <div class="right">
+          <a href="">海外酒店</a>
+          <a href="">团购</a>
+          <a href="">特价机票</a>
+          <a href="">民宿客栈</a>
+        </div>
+      </section>
+     <section class="items">
+        <div class="left"></div>
+        <div class="right">
+          <a href="">海外酒店</a>
+          <a href="">团购</a>
+          <a href="">特价机票</a>
+          <a href="">民宿客栈</a>
+        </div>
+      </section>
+      <section class="items">
+        <div class="left"></div>
+        <div class="right">
+          <a href="">海外酒店</a>
+          <a href="">团购</a>
+          <a href="">特价机票</a>
+          <a href="">民宿客栈</a>
+        </div>
+      </section>
+      <section class="other">
+        <a href="javascript:;"><img src="./xcImages/2.png" alt=""></a>
+        <a href="javascript:;"><img src="./xcImages/3.png" alt=""></a>
+      </section>
+    </main>
+    <!--尾部-->
+    <footer>
+      <div class="nav">
+        <a href="">电话预定</a>
+        <a href="">下载客户端</a>
+        <a href="">我的</a>
+      </div>
+      <p class="link">
+        <a href="">网站地图</a>
+        <a href="">English</a>
+        <a href="">电脑版</a>
+      </p>
+       <p class="copyright">&copy;携程旅行</p>
+    </footer>
+  </div>
+</body>
+</html>
